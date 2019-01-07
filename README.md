@@ -9,4 +9,4 @@ Temario:
 - [Cadenas](strings.md)
 - [Listas](lists.md)
 - Estructuras de control
- - [Condicionales](conditionals.md)
+  - [Condicionales](conditionals.md)
