@@ -18,6 +18,8 @@ que python acepta
 """)
 ```
 
+Los operadores de escape como `\n` funcionan tanto con comillas simples como en comillas dobles.
+
 ## Concatenación
 
 El operador `+` se utiliza para concatenar cadenas
