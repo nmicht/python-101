@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Bloques - Python 101</title>
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Python 101 / Introducción</h1>
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Bloques
+
+            En python los bloques de códigos se definen por espacios y no hay necesidad de llaves.
+
+            ```python
+            # Secuencia Fibonacci
+            a, b = 0, 1
+            while(a < 10):
+                print(a)
+                a, b = b, a+b
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ```python
+            # Secuencia Fibonacci
+            a, b = 0, 1
+            while(a < 10):
+                print(a)
+                a, b = b, a+b
+            ```
+
+            En este ejemplo, el bloque inicia con `:` y el contenido del bloque esta indentado.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            En caso se que se requiera código después del bloque se agrega una línea en blanco.
+
+            ```python
+            # Secuencia Fibonacci
+            a, b = 0, 1
+            while(a < 10):
+                print(a)
+                a, b = b, a+b
+
+            print('Termina el programa')
+            ```
+          </textarea>
+        </section>
+
+				<section>
+					<h1>GRACIAS</h1>
+					<h3>Contáctame</h3>
+					<ul>
+						<li>hola@michelletorres.mx</li>
+						<li>@nmicht</li>
+						<li>https://michelletorres.mx</li>
+					</ul>
+
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+	  <script src="reveal.js/js/reveal.js"></script>
+
+	  <script>
+	  // More info about config & dependencies:
+	  // - https://github.com/hakimel/reveal.js#configuration
+	  // - https://github.com/hakimel/reveal.js#dependencies
+	  Reveal.initialize({
+	    controls: true,
+	    slideNumber: false,
+	    dependencies: [
+	      { src: 'reveal.js/plugin/markdown/marked.js' },
+	      { src: 'reveal.js/plugin/markdown/markdown.js' },
+	      { src: 'reveal.js/plugin/notes/notes.js', async: true },
+	      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	    ]
+	  });
+	  </script>
+	</body>
+	</html>

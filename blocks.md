@@ -1,25 +1,25 @@
-# Blocks
+# Bloques
 
-In python the blocks are defined by indentation, no need of curly braces.
+En python los bloques de códigos se definen por espacios y no hay necesidad de llaves.
 
 ```python
-# Fibonacci sequence
+# Secuencia Fibonacci
 a, b = 0, 1
 while(a < 10):
     print(a)
     a, b = b, a+b
 ```
 
-In this example, the block for the while starts with `:` and all the block is indented.
+En este ejemplo, el bloque inicia con `:` y el contenido del bloque esta indentado.
 
-In case we need more code after the block, a blank line is needed.
+En caso se que se requiera código después del bloque se agrega una línea en blanco.
 
 ```python
-# Fibonacci sequence
+# Secuencia Fibonacci
 a, b = 0, 1
 while(a < 10):
     print(a)
     a, b = b, a+b
 
-print('Program ended')
+print('Termina el programa')
 ```

@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Introducción - Python 101</title>
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Python 101 / Introducción</h1>
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Comentarios
+
+            Los comentarios en python se ponen con el símbolo de numeral
+
+            ```python
+            # Este es un comentario de linea completo
+            var1 = 5 # Este es un comentario despues de la declaracion de una variable
+            texto = "#Esta es una cadena" # Este es otro comentario, y la cadena definida, se va a reconocer apesar de tener un numeral
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Variables
+
+            Una variable es un espacio de memoria que almacena un valor.
+            Se considera que una variable no esta definida cuando no tiene un valor asignado.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Asignación
+
+            La asignación de valores a variables se hace con el operador `=`
+
+            ```python
+            a = 5
+            ```
+
+            Pero también existe la asignación simultánea:
+
+            ```python
+            a, b = 0, 1
+            ```
+
+            donde `a` recibe el valor `0` y `b` recibe el valor `1`.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Imprimir información
+
+            `print` se utiliza para enviar salidas y al final del print python envia un salto de linea.
+
+            ```python
+            myVar = 5
+            print(myVar)
+            >>> 5
+            ```
+
+            Las cadenas se enviar como tal, entre comillas simples o dobles.
+
+            ```python
+            print('Un mensaje')
+            >>> "Un mensaje"
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            Se pueden enviar distintos valores a imprimir separando por comas, y python por automático agregará un espacio.
+
+            ```python
+            myVar = 5
+            print('El valor de la variable es:', myVar)
+            >>> "El valor de la variable es: 5"
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            Para evitar el salto de linea se puede usar `end`
+
+            ```python
+            myVar = 5
+            print('El valor de la variable es:', myVar)
+            print('El doble es:', myVar*2)
+            >>> "El valor de la variable es: 5"
+            "El doble es: 10"
+
+            print('El valor de la variable es:', myVar, end=', ')
+            print('El doble es:', myVar*2)
+            >>> "El valor de la variable es: 5, El doble es: 10"
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Obtener entradas del usuario
+
+            Para leer información que el usuario introduce a través de la entrada estándar (teclado) podemos usar `input`
+
+            ```python
+            n = input('Escribe tu nombre: ') # Deja el prompt listo para que el usuario introduzca datos
+            ```
+          </textarea>
+        </section>
+
+				<section>
+					<h1>GRACIAS</h1>
+					<h3>Contáctame</h3>
+					<ul>
+						<li>hola@michelletorres.mx</li>
+						<li>@nmicht</li>
+						<li>https://michelletorres.mx</li>
+					</ul>
+
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+	  <script src="reveal.js/js/reveal.js"></script>
+
+	  <script>
+	  // More info about config & dependencies:
+	  // - https://github.com/hakimel/reveal.js#configuration
+	  // - https://github.com/hakimel/reveal.js#dependencies
+	  Reveal.initialize({
+	    controls: true,
+	    slideNumber: false,
+	    dependencies: [
+	      { src: 'reveal.js/plugin/markdown/marked.js' },
+	      { src: 'reveal.js/plugin/markdown/markdown.js' },
+	      { src: 'reveal.js/plugin/notes/notes.js', async: true },
+	      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	    ]
+	  });
+	  </script>
+	</body>
+	</html>
