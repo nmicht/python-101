@@ -117,3 +117,11 @@ myList = [1,2,3,4,5]
 myList[0] = [1,2,3]
 >>> [[1,2,3],2,3,4,5]
 ```
+
+## Creación de listas a través de iterables
+
+`range` es un iterable, y podemos entonces crear listas usando range como un argumento.
+
+```python
+myList = list(range(5))
+```

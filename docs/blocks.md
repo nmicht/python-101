@@ -23,3 +23,14 @@ while(a < 10):
 
 print('Termina el programa')
 ```
+
+# Pass
+
+Cuando se requiere tener bloques de código vacios, podemos usar `pass`.  
+Esto es común cuando estamos armando funciones, condiciones, etc, pero aún no pondremos código, y usamos un pass para no olvidar que ahí debemos poner código mas adelante.
+
+```python
+while True:
+  pass
+
+```
