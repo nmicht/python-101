@@ -11,3 +11,4 @@ Temario:
 - Estructuras de control
   - [Condicionales](conditionals.md)
   - [Ciclos](loops.md)
+- [Funciones](functions.md)
