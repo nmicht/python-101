@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Introducción - Python 101</title>
+  <title>Cadenas - Python 101</title>
 
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="reveal.js/css/theme/white.css">
@@ -31,7 +31,7 @@
 			<div class="slides">
 
 				<section>
-					<h1>Introducción - Python 101</h1>
+					<h1>Cadenas - Python 101</h1>
 					<p>
 						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
 					</p>
@@ -39,106 +39,147 @@
 
         <section data-markdown>
           <textarea data-template>
-            ## Comentarios
+            # Cadenas
 
-            Los comentarios en python se ponen con el símbolo de numeral
+            Las cadenas en python se utilizan para caracteres o una secuencia de los mismos.
+            Se pueden representar con comillas simples `''` o con comillas dobles `""`.
 
             ```python
-            # Este es un comentario de linea completo
-            var1 = 5 # Este es un comentario despues de la declaracion de una variable
-            texto = "#Esta es una cadena" # Este es otro comentario, y la cadena definida, se va a reconocer apesar de tener un numeral
+            'una cadena'
+            "otra cadena"
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ## Variables
-
-            Una variable es un espacio de memoria que almacena un valor.
-            Se considera que una variable no esta definida cuando no tiene un valor asignado.
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ## Asignación
-
-            La asignación de valores a variables se hace con el operador `=`
+            Existen también cadenas de múltiple linea
 
             ```python
-            a = 5
-            ```
-
-            Pero también existe la asignación simultánea:
-
-            ```python
-            a, b = 0, 1
-            ```
-
-            donde `a` recibe el valor `0` y `b` recibe el valor `1`.
-          </textarea>
-        </section>
-
-        <section data-markdown>
-          <textarea data-template>
-            ## Imprimir información
-
-            `print` se utiliza para enviar salidas y al final del print python envia un salto de linea.
-
-            ```python
-            myVar = 5
-            print(myVar)
-            >>> 5
-            ```
-
-            Las cadenas se enviar como tal, entre comillas simples o dobles.
-
-            ```python
-            print('Un mensaje')
-            >>> "Un mensaje"
+            print("""\
+               Esta es una cadena       con espacios
+               y de multiples lineas
+            que python acepta
+            """)
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            Se pueden enviar distintos valores a imprimir separando por comas, y python por automático agregará un espacio.
+            Los operadores de escape como `\n` funcionan tanto con comillas simples como en comillas dobles.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Concatenación
+
+            El operador `+` se utiliza para concatenar cadenas
 
             ```python
-            myVar = 5
-            print('El valor de la variable es:', myVar)
-            >>> "El valor de la variable es: 5"
+            'ho' + 'la'
+            >>> hola
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            Para evitar el salto de linea se puede usar `end`
+            Sin embargo, en el ejemplo anterior se puede omitir el símbolo de `+` ya que python concatena por automático cualquier cadena que este contigua a otra.
 
             ```python
-            myVar = 5
-            print('El valor de la variable es:', myVar)
-            print('El doble es:', myVar*2)
-            >>> "El valor de la variable es: 5"
-            "El doble es: 10"
-
-            print('El valor de la variable es:', myVar, end=', ')
-            print('El doble es:', myVar*2)
-            >>> "El valor de la variable es: 5, El doble es: 10"
+            'ho' 'la'
+            >>> hola
             ```
           </textarea>
         </section>
 
         <section data-markdown>
           <textarea data-template>
-            ## Obtener entradas del usuario
+            ## Repetir cadenas
 
-            Para leer información que el usuario introduce a través de la entrada estándar (teclado) podemos usar `input`
+            Si se desea repetir una cadena, se puede realizar una "multiplicación"
 
             ```python
-            n = input('Escribe tu nombre: ') # Deja el prompt listo para que el usuario introduzca datos
+            3 * 'Yo'
+            >>> YoYoYo
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Manejo de cadenas como secuencias
+
+            Python utiliza el tipo de dato secuencia para manipular las cadenas y las listas.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Acceder a elementos de la cadena por su indice
+
+            Los caracteres de una cadena se indexan a partir del cero de izquierda a derecha.
+
+            ```python
+            word = 'Michelle'
+            word[3]
+            >>> h
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            Se utiliza también indices negativos para iniciar el conteo desde el final de la cadena. Estos inician en -1.
+
+            ```python
+            word = 'Michelle'
+            word[-2]
+            >>> l
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Modificación de cadenas
+
+            **NOTA** Las cadenas no se pueden modificar, por lo cual no se pueden cambiar los valores de una posición.
+
+            ```python
+            word = 'Michelle'
+            word[0] = 'm'
+            >>> Traceback (most recent call last):
+              File "<stdin>", line 1, in <module>
+            TypeError: 'str' object does not support item assignment
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ### Subcadenas
+
+            Para obtener porciones de una cadena se indica el indice para comenzar y el indice al que se quiere llegar (sin incluir).
+
+            ```python
+            word = 'Michelle'
+            word[1:4] # Desde uno hasta 3
+            >>> ich
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            Se pueden usar tambien indices negativos
+
+            ```python
+            word = 'Michelle'
+            word[-2:] # Desde -2 y hasta el final de la cadena
+            >>> le
             ```
           </textarea>
         </section>

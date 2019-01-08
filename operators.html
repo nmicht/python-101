@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Python 101</title>
+  <title>Operadores - Python 101</title>
 
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="reveal.js/css/theme/white.css">
@@ -31,33 +31,70 @@
 			<div class="slides">
 
 				<section>
-					<h1>Python 101</h1>
+					<h1>Operadores - Python 101</h1>
 					<p>
 						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
 					</p>
 				</section>
 
         <section data-markdown>
-        	<textarea data-template>
-            Este es un material generado para repasar y practicar conceptos de Python3.7
+          <textarea data-template>
+            ## Suma, resta, multiplicación y división
+            En python se pueden realizar todas las operaciones básicas conocidas tales como suma, resta, multiplicación y división.
 
-            Temario (parte 1):
-            - [Introducción](./basics.html)
-            - [Bloques](./blocks.html)
-            - [Operadores](./operators.html)
-            - [Cadenas](./strings.html)
-            - [Listas](./lists.html)
-        	</textarea>
-        </section>
-
-        <section data-markdown>
-        	<textarea data-template>
-            Temario (parte 2):
-            - Estructuras de control
-              - [Condicionales](./conditionals.html)
+            ```python
+            2 + 3
+            >>> 4
+            2 * 3
+            >>> 6
+            2 - 3
+            >>> -1
+            2 / 3
+            >>> 0.6666666666666666
+            ```
           </textarea>
         </section>
 
+        <section data-markdown>
+          <textarea data-template>
+            ## Residuo
+
+            El residuo es la parte restante de una division de enteros
+
+            ```python
+            2 % 3
+            >>> 2
+            5 % 2
+            >>> 1
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Parte entera de la división
+
+            En Python cualquier división siempre devolverá un flotante a pesar de que los inputs sean enteros.
+
+            Si por el contrario, lo que se busca es la parte entera, python tiene el operador `//`.
+
+            ```python
+            2 // 3
+            >>> 0
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Potencia
+
+            ```python
+            2 ** 3
+            >>> 8
+            ```
+          </textarea>
+        </section>
 				<section>
 					<h1>GRACIAS</h1>
 					<h3>Contáctame</h3>
