@@ -53,3 +53,78 @@ y este valor podemos imprimirlo o guardarlo en una variable
 print(holaMundo())
 cadena = holaMundo()
 ```
+
+## Argumentos con valores por default
+
+Cuando declaramos argumentos para nuestras funciones, estamos indicando que para llamar la función se deben enviar esos valores.
+
+Podemos además, indicar un valor por defecto en caso que uno valor no haya sido enviado.
+
+```python
+def saluda(who='Mundo'):
+  """Imprime un mensaje de saludo."""
+  print('Hola', who)
+
+saluda()
+>>> Hola Mundo
+
+saluda('Michelle')
+>>> Hola Michelle
+```
+
+## Asignación de valores default solo la primera vez
+
+La definición y asignación de los valores default se realiza solo una vez, de modo que si se estan usando como valores default objeto como listas, diccionarios, etc, se podrá tener este problema
+
+```python
+def agrega(valor, lista=[]):
+    lista.append(valor)
+    return lista
+
+print(agrega(1))
+print(agrega(2))
+print(agrega(3))
+
+# La salida sera
+
+>>> [1]
+>>> [1, 2]
+>>> [1, 2, 3]
+```
+
+## Argumentos por posición o por keyword
+
+La manera en que enviamos argumentos a nuestras funciones es por el orden en que estos fueron declarados.
+
+```python
+def myFunction(a=1, b='algo', c=3, d='algo mas'):
+  print(a,b,c,d)
+
+myFunction(1,2,3,4)
+# a = 1
+# b = 2
+# c = 3
+# d = 4
+```
+
+Sin embargo, python ofrece la oportunidad de enviar los argumentos usando keywords, es decir, los nombres de las variables.
+
+```python
+myFunction(1, d='valor para d', b='bbb')
+# a = 1   
+# b = bbb
+# c = 3
+# d = valor para d
+```
+
+## Argumentos arbitrarios
+
+Se puede guardar una lista con todos los argumentos que se reciban y de esta manera no indicar la cantidad de argumentos esperados
+
+```python
+def invitados(*args):
+  for person in args:
+    print(person)
+```
+
+De esta manera se puede mandar a llamar `invitados('maria', 'pedro', 'pablo')` o con la cantidad de argumentos que se quiera.

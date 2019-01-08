@@ -125,3 +125,19 @@ myList[0] = [1,2,3]
 ```python
 myList = list(range(5))
 ```
+
+## Buscar un elemento en la lista
+
+Con el keyword `in` podemos validar si un elemento pertenece o no a una lista
+
+```python
+if 'ok' in ('n', 'no', 'nop', 'nope'):
+  print('Se encontró el elemento')
+```
+
+Existe el inverso que es `not in`
+
+```python
+if 'ok' not in ('n', 'no', 'nop', 'nope'):
+  print('NO se encontró el elemento')
+```
