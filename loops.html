@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Ciclos - Python 101</title>
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Ciclos - Python 101</h1>
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Ciclos
+
+            En programación, un ciclo es un bloque de código que se repetirá en distintas ocasiones siempre y cuando en cada iteración se cumpla una condición.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## While
+
+            Un ciclo while evalua primero si una condición se cumple, y en caso de que se cumpla, entonces ejecuta el código que se encuentra dentro del bloque y regresa a la condición.
+            Se vuelve a evaluar la condición y si es verdadero, se vuelve a ejecutar el código que se encuentra dentro del bloque.
+
+            ```python
+            i = 1
+            while(i <= 5):
+              print('Iteracion', i)
+              i += 1
+
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Else en el while
+
+            A diferencia de otros lenguajes, python permite agregar una condición `else` al while, permitiendo ejecutar cierto código en caso de que no se cumpla la condición antes de salir del ciclo.
+
+            ```python
+            i = 1
+            while(i <= 5):
+              print('Iteracion', i)
+              i += 1
+            else:
+              print(i, 'ya no cumple la condicion')
+
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Break
+
+            Cuando se desea romper un ciclo por completo se utiliza el `break`
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ```python
+            i = 1
+            while(i <= 5):
+              if(i == 2):
+                break
+              print('Iteracion', i)
+              i += 1
+
+            ```
+
+            En este ejemplo, a pesar de tener un ciclo que debería iterar desde 1 hasta 5, cuando llega a 2, se termina.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Continue
+
+            El `continue` nos permite romper solo una iteración del ciclo, es decir, si queremos continuar con el ciclo, pero no seguir con el proceso actual, se usar continue.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ```python
+            i = 0
+            while(i < 5):
+              i += 1
+              if(i % 2):
+                continue
+              print('Iteracion', i)
+
+            ```
+
+            En este caso tenemos un ciclo que itera de 0 a 4, lo incrementa, y lo imprime, pero hemos agregado una condición para que si el número es múltiplo de 2, entonces termine la iteración y no siga con la ejecución.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # For
+
+            El ciclo `for` en python se utiliza para iterar sobre una secuencia (listas por ejemplo) lo cual lo convierte en lo similar a un `foreach` de otros lenguajes.
+
+            ```python
+            mascotas = ['gato', 'perro', 'pez']
+            for animal in mascotas:
+              print('Yo tengo un', animal)
+
+            >>> Yo tengo un gato
+            >>> Yo tengo un perro
+            >>> Yo tengo un pez
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            ## Else en el for
+
+            Al igual que con el while, en python se puede agregar una condición else
+
+            ```python
+            mascotas = ['gato', 'perro', 'pez']
+            for animal in mascotas:
+              print('Yo tengo un', animal)
+            else:
+              print('Ya no se puede iterar, pero el ultimo animal fue:', animal)
+
+            >>> Yo tengo un gato
+            >>> Yo tengo un perro
+            >>> Yo tengo un pez
+            >>> Ya no se puede iterar, pero el ultimo animal fue: pez
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Modificar la secuencia mientras se itera
+
+            En un for no se hace copia de los valores, de modo que si quieres modificar la secuencia, se recomienda que primero hagas una copia.
+            Recuerda que puedes usar la notación `"slice"`, es decir `[n:x]`.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Iterar sobre una secuencia de números
+
+            `range` es un método de python que nos permite generar una serie de la cantidad de números que le indiquemos, pero en realidad no es una lista como tal, es decir, no guarda nada en memoria, y esos elementos existen solo cuando los iteramos.
+
+            ```python
+            x = range(5)
+            >>> range(0, 5)
+            ```
+
+            Como vemos en el ejemplo, si imprimimos `x` lo que devuelve es `range(0,5)` pero no hay datos.
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            Sin embargo, cuando iteramos un rango, entonces los valores si existen.
+
+            ```python
+            for i in range(5):
+              print(i)
+
+            >>> 0
+            >>> 1
+            >>> 2
+            >>> 3
+            >>> 4
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+            # Algunas técnicas de iteración
+
+            Con todas las facilidades de python, se puede lograr combinar técnicas para iterar y manipular secuencias.
+
+            Iteramos una lista e imprimos los elementos de la lista, pero también su índice.
+
+            ```python
+            mascotas = ['gato', 'perro', 'pez']
+            for i in range(len(mascotas)):
+              print(i, mascotas[i])
+
+            >>> 0 gato
+            >>> 1 perro
+            >>> 2 pez
+            ```
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+        <section data-markdown>
+          <textarea data-template>
+
+          </textarea>
+        </section>
+
+
+				<section>
+					<h1>GRACIAS</h1>
+					<h3>Contáctame</h3>
+					<ul>
+						<li>hola@michelletorres.mx</li>
+						<li>@nmicht</li>
+						<li>https://michelletorres.mx</li>
+					</ul>
+
+					<p>
+						<small>Por <a href="https://michelletorres.mx">Michelle Torres</a> / <a href="http://twitter.com/nmicht">@nmicht</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+	  <script src="reveal.js/js/reveal.js"></script>
+
+	  <script>
+	  // More info about config & dependencies:
+	  // - https://github.com/hakimel/reveal.js#configuration
+	  // - https://github.com/hakimel/reveal.js#dependencies
+	  Reveal.initialize({
+	    controls: true,
+	    slideNumber: false,
+	    dependencies: [
+	      { src: 'reveal.js/plugin/markdown/marked.js' },
+	      { src: 'reveal.js/plugin/markdown/markdown.js' },
+	      { src: 'reveal.js/plugin/notes/notes.js', async: true },
+	      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	    ]
+	  });
+	  </script>
+	</body>
+	</html>

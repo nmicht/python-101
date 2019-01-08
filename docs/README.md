@@ -10,3 +10,4 @@ Temario:
 - [Listas](lists.md)
 - Estructuras de control
   - [Condicionales](conditionals.md)
+  - [Ciclos](loops.md)
