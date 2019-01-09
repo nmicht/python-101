@@ -1,4 +1,4 @@
-# Condicionales
+# 6.1 Condicionales
 
 Una condicional es una estructura de control que nos permite ejecutar un bloque de código solo si se cumple una condicional.
 
@@ -34,3 +34,5 @@ else:
 ```
 
 En otros lenguajes de programación existe la estructura `switch`, sin embargo en python esta no existe.
+
+[:arrow_forward: Siguiente: Ciclos](loops.md)

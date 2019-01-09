@@ -1,3 +1,5 @@
+# 1. Introducción
+
 ## Comentarios
 
 Los comentarios en python se ponen con el símbolo de numeral
@@ -16,7 +18,7 @@ Se considera que una variable no esta definida cuando no tiene un valor asignado
 
 ## Asignación
 
-La asignación de valores a variables se hace con el operador `=`
+La asignación de valores a variables se hace con el operador "igual" `=`
 
 ```python
 a = 5
@@ -32,7 +34,7 @@ donde `a` recibe el valor `0` y `b` recibe el valor `1`.
 
 ## Imprimir información
 
-`print` se utiliza para enviar salidas y al final del print python envia un salto de linea.
+`print` se utiliza para enviar salidas. Al final del print python envia un salto de linea.
 
 ```python
 myVar = 5
@@ -40,7 +42,7 @@ print(myVar)
 >>> 5
 ```
 
-Las cadenas se enviar como tal, entre comillas simples o dobles.
+Las cadenas se envían como tal, entre comillas simples o dobles.
 
 ```python
 print('Un mensaje')
@@ -55,7 +57,7 @@ print('El valor de la variable es:', myVar)
 >>> "El valor de la variable es: 5"
 ```
 
-Para evitar el salto de linea se puede usar `end`
+Para evitar el salto de linea se puede usar `end`.
 
 ```python
 myVar = 5
@@ -76,3 +78,5 @@ Para leer información que el usuario introduce a través de la entrada estánda
 ```python
 n = input('Escribe tu nombre: ') # Deja el prompt listo para que el usuario introduzca datos
 ```
+
+[:arrow_forward: Siguiente: Bloques](blocks.md)

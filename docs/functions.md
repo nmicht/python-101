@@ -1,4 +1,4 @@
-# Funciones
+# 7. Funciones
 
 Una función es un bloque de código que cumple con una tarea específica y que puede reutilizarse mandandose a ejecutar en distintas ocasiones dentro de un programa.
 
@@ -128,3 +128,5 @@ def invitados(*args):
 ```
 
 De esta manera se puede mandar a llamar `invitados('maria', 'pedro', 'pablo')` o con la cantidad de argumentos que se quiera.
+
+[:arrow_forward: Siguiente: Clases](classes.md)

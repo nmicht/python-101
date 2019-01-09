@@ -1,4 +1,4 @@
-# Cadenas
+# 4. Cadenas
 
 Las cadenas en python se utilizan para caracteres o una secuencia de los mismos.
 Se pueden representar con comillas simples `''` o con comillas dobles `""`.
@@ -96,3 +96,5 @@ word = 'Michelle'
 word[-2:] # Desde -2 y hasta el final de la cadena
 >>> le
 ```
+
+[:arrow_forward: Siguiente: Listas](lists.md)

@@ -1,6 +1,7 @@
-# Operadores aritméticos
+# 3. Operadores
 
-## Suma, resta, multiplicación y división
+## Operadores aritméticos
+### Suma, resta, multiplicación y división
 En python se pueden realizar todas las operaciones básicas conocidas tales como suma, resta, multiplicación y división.
 
 ```python
@@ -42,3 +43,5 @@ Si por el contrario, lo que se busca es la parte entera, python tiene el operado
 2 ** 3
 >>> 8
 ```
+
+[:arrow_forward: Siguiente: Cadenas](strings.md)

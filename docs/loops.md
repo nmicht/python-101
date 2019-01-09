@@ -1,4 +1,4 @@
-# Ciclos
+# 6.2 Ciclos
 
 En programación, un ciclo es un bloque de código que se repetirá en distintas ocasiones siempre y cuando en cada iteración se cumpla una condición.
 
@@ -136,3 +136,5 @@ for i in range(len(mascotas)):
 >>> 1 perro
 >>> 2 pez
 ```
+
+[:arrow_forward: Siguiente: Funciones](functions.md)

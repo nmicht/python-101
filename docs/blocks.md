@@ -1,4 +1,4 @@
-# Bloques
+# 2. Bloques
 
 En python los bloques de códigos se definen por espacios y no hay necesidad de llaves.
 
@@ -34,3 +34,5 @@ while True:
   pass
 
 ```
+
+[:arrow_forward: Siguiente: Operadores](operators.md)

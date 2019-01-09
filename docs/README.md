@@ -14,15 +14,15 @@ Los [Slides](https://nmicht.github.io/python-101/index.html) estan publicados en
 
 ## :notebook: Modo texto
 Temario:  
-- [Introducción](basics.md)
-- [Bloques](blocks.md)
-- [Operadores](operators.md)
-- [Cadenas](strings.md)
-- [Listas](lists.md)
-- Estructuras de control
-  - [Condicionales](conditionals.md)
-  - [Ciclos](loops.md)
-- [Funciones](functions.md)
+1. [Introducción](basics.md)
+2. [Bloques](blocks.md)
+3. [Operadores](operators.md)
+4. [Cadenas](strings.md)
+5. [Listas](lists.md)
+6. Estructuras de control
+  6.1 [Condicionales](conditionals.md)
+  6.2 [Ciclos](loops.md)
+7. [Funciones](functions.md)
 
 ## :busts_in_silhouette: Contribuidores
 

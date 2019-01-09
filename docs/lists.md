@@ -1,4 +1,4 @@
-# Listas
+# 5. Listas
 
 En Python las listas son arreglos que pueden contener cualquier tipo de dato,
 pero se espera que idealmente sea una colección del mismo tipo.
@@ -141,3 +141,5 @@ Existe el inverso que es `not in`
 if 'ok' not in ('n', 'no', 'nop', 'nope'):
   print('NO se encontró el elemento')
 ```
+
+[:arrow_forward: Siguiente: Condicionales](conditionals.md)
